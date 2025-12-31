@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Block21 (B21) — Immutable. Scarce. Decentralized.</title>
+  <meta name="description" content="Block21 (B21) — Fixed supply ERC-20 on Polygon. 2,100,000 total supply. Immutable 2% DEX sell fee (split 1% Treasury / 1% Rewards). Transparent, audit-friendly, investor-focused." />
+  <meta property="og:title" content="Block21 (B21)" />
+  <meta property="og:description" content="Immutable. Scarce. Decentralized. A Bitcoin‑inspired fixed supply ERC‑20 token on Polygon." />
+  <meta property="og:image" content="assets/bg-coin-1.jpg" />
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Block Twenty One (B21)",
+    "url": "https://example.com",
+    "logo": "https://example.com/logo.svg",
+    "sameAs": [
+      "https://twitter.com/your_twitter",
+      "https://facebook.com/your_facebook",
+      "https://t.me/your_telegram",
+      "https://github.com/your_github"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#hero" aria-label="Block21 home">
+        <svg class="brand-logo" viewBox="0 0 320 120" width="48" height="48" aria-hidden="true">
+          <defs>
+            <linearGradient id="g-silver" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#f3f6f8"/><stop offset="1" stop-color="#9aa4ac"/>
+            </linearGradient>
+            <linearGradient id="g-gold" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#f0d57a"/><stop offset="1" stop-color="#b8860b"/>
+            </linearGradient>
+          </defs>
+          <text x="4" y="80" font-family="Inter, Arial" font-weight="800" font-size="96" fill="url(#g-silver)">B</text>
+          <text x="150" y="72" font-family="Inter, Arial" font-weight="700" font-size="68" fill="url(#g-gold)" letter-spacing="2">21</text>
+        </svg>
+        <div class="brand-text">
+          <span class="name">Block21</span>
+          <small class="ticker">B21</small>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#token-identity">Token</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#whitepaper">Whitepaper</a>
+        <a href="#faq">FAQ</a>
+        <a href="#airdrop" class="btn small">Airdrop</a>
+      </nav>
+
+      <div class="actions">
+        <div class="price-widget" id="priceWidget" aria-live="polite">
+          <div class="ticker" data-id="bitcoin">BTC <span class="price" id="p-bitcoin">—</span></div>
+          <div class="ticker" data-id="ethereum">ETH <span class="price" id="p-ethereum">—</span></div>
+          <div class="ticker" data-id="polygon">MATIC <span class="price" id="p-polygon">—</span></div>
+        </div>
+        <button id="connectWallet" class="btn ghost">Connect Wallet</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO with layered background images -->
+    <section id="hero" class="hero">
+      <div class="bg-layer layer-1" aria-hidden="true"></div>
+      <div class="bg-layer layer-2" aria-hidden="true"></div>
+      <div class="bg-gradient"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Block21 (B21)</h1>
+          <p class="lead">Immutable. Scarce. Decentralized. A Bitcoin‑inspired fixed supply ERC‑20 token on Polygon.</p>
+
+          <div class="hero-ctas">
+            <a id="buyBtn" class="btn primary" href="https://quickswap.exchange/#/swap?outputCurrency=0x9e885a4b54a04c8311e8c480f89c0e92cc0a1db2" target="_blank" rel="noopener">Buy B21</a>
+            <a class="btn outline" href="https://polygonscan.com/address/0x9e885a4b54a04c8311e8c480f89c0e92cc0a1db2" target="_blank" rel="noopener">Verify Contract</a>
+            <a class="btn ghost" href="#whitepaper">Read Whitepaper</a>
+          </div>
+
+          <div class="contract-strip">
+            <div class="contract-text">
+              Contract:
+              <code id="contractAddress">0x9e885a4b54a04c8311e8c480f89c0e92cc0a1db2</code>
+            </div>
+            <div class="contract-actions">
+              <button id="copyAddress" class="btn tiny">Copy</button>
+              <a class="btn tiny" href="https://polygonscan.com/address/0x9e885a4b54a04c8311e8c480f89c0e92cc0a1db2" target="_blank" rel="noopener">Polygonscan</a>
+            </div>
+          </div>
+
+          <ul class="hero-stats">
+            <li><strong>Supply</strong><span>2,100,000 B21</span></li>
+            <li><strong>Decimals</strong><span>8</span></li>
+            <li><strong>Fee</strong><span>2% sell-only</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-card" aria-hidden="false">
+          <div class="token-card">
+            <div class="token-header">
+              <img class="token-visual-img" src="assets/bg-coin-2.jpg" alt="Block21 visual">
+              <div class="token-title">
+                <strong>Block21</strong>
+                <small>B21 • Polygon</small>
+              </div>
+            </div>
+
+            <dl class="token-meta">
+              <div><dt>Total Supply</dt><dd>2,100,000</dd></div>
+              <div><dt>Decimals</dt><dd>8</dd></div>
+              <div><dt>Standard</dt><dd>ERC‑20 (OpenZeppelin)</dd></div>
+              <div><dt>Sell Fee</dt><dd>2% (1% Treasury / 1% Rewards)</dd></div>
+            </dl>
+
+            <div class="card-actions">
+              <a class="btn outline small" href="https://quickswap.exchange/#/swap?outputCurrency=0x9e885a4b54a04c8311e8c480f89c0e92cc0a1db2" target="_blank">Buy on QuickSwap</a>
+              <a class="btn ghost small" href="#airdrop">Register Airdrop</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section container">
+      <h2>Final Statement — What Block21 (V1) Is</h2>
+      <p class="muted">Block21 (B21) V1 is a fully decentralized, fixed-supply ERC‑20 asset with immutable 2% DEX sell fees, secure liquidity handling, and zero admin control after deployment. Designed for transparency, long‑term trust, and external optional economic evolution (V2).</p>
+
+      <div class="pill-grid">
+        <div class="pill">
+          <strong>Immutable Supply</strong>
+          <span>2,100,000 B21 — minted once</span>
+        </div>
+        <div class="pill">
+          <strong>Sell-Only Fee</strong>
+          <span>2% on DEX sells only (split 1% Treasury / 1% Rewards)</span>
+        </div>
+        <div class="pill">
+          <strong>Renounced Ownership</strong>
+          <span>No owner, no admin, no upgrade hooks after setup</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AIRDROP -->
+    <section id="airdrop" class="section container">
+      <h2>Airdrop Registration</h2>
+      <p class="muted">Connect your Polygon wallet and register your address for the airdrop. Addresses are recorded to your configured webhook for later distribution. (No funds moved by this form.)</p>
+
+      <div class="airdrop-grid">
+        <div class="airdrop-card">
+          <h3>Register for Airdrop</h3>
+          <p>Step 1 — Connect MetaMask (Polygon)</p>
+          <div class="field">
+            <button id="airdropConnect" class="btn primary">Connect Wallet (Polygon)</button>
+          </div>
+
+          <p>Step 2 — Optional: Sign a message (proves ownership, non-custodial)</p>
+          <div class="field">
+            <button id="airdropSign" class="btn outline">Sign Proof Message</button>
+          </div>
+
+          <p>Step 3 — Register</p>
+          <div class="field">
+            <button id="airdropRegister" class="btn ghost">Register Address</button>
+          </div>
+
+          <div class="airdrop-status" id="airdropStatus">Not connected</div>
+        </div>
+
+        <div class="airdrop-info">
+          <h4>Registration Details</h4>
+          <ul>
+            <li><strong>Network:</strong> Polygon (MATIC)</li>
+            <li><strong>Contract:</strong> <code>0x9e885a4b54a04c8311e8c480f89c0e92cc0a1db2</code></li>
+            <li class="muted">We will only record your wallet address and optional signature. No private keys are ever requested.</li>
+          </ul>
+          <div class="registered-list" id="registeredList">
+            <h5>Local registered addresses (demo)</h5>
+            <ul id="registeredAddresses"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- rest of content kept as-is (token-identity, tokenomics, whitepaper, faq, polygonscan description, contact) -->
+    <!-- Token Identity -->
+    <section id="token-identity" class="section container">
+      <h2>Token Identity</h2>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3>Core Properties</h3>
+          <table class="props">
+            <tbody>
+              <tr><th>Name</th><td>Block21</td></tr>
+              <tr><th>Symbol</th><td>B21</td></tr>
+              <tr><th>Decimals</th><td>8</td></tr>
+              <tr><th>Network</th><td>Polygon (EVM compatible)</td></tr>
+              <tr><th>Standard</th><td>ERC‑20 (OpenZeppelin audited)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="spec-card">
+          <h3>Supply Model (Critical)</h3>
+          <ul class="supply-list">
+            <li><strong>Total Supply:</strong> 2,100,000 B21 (21 Lakh)</li>
+            <li><strong>Minting:</strong> One-time only in constructor</li>
+            <li><strong>Post-deploy Minting:</strong> Impossible</li>
+            <li><strong>Burn:</strong> Not implemented</li>
+            <li><strong>Inflation:</strong> None</li>
+            <li class="muted">Supply is mathematically fixed forever.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tokenomics & Fees -->
+    <section id="tokenomics" class="section container">
+      <h2>Fee Structure (V1)</h2>
+      <div class="fee-grid">
+        <div class="fee-card">
+          <h3>Fee Amount</h3>
+          <p class="big">2% fixed — immutable in V1</p>
+          <p class="muted">Cannot increase. Cannot decrease. Simple and predictable.</p>
+        </div>
+
+        <div class="fee-card">
+          <h3>When the Fee Applies</h3>
+          <pre class="code">if (to == lpPair) { // selling to DEX liquidity pair }</pre>
+          <p class="muted">Only when B21 is SOLD to the official LP pair.</p>
+        </div>
+
+        <div class="fee-card">
+          <h3>When the Fee Does NOT Apply</h3>
+          <ul>
+            <li>Wallet → Wallet transfers</li>
+            <li>Buying from DEX</li>
+            <li>Adding liquidity</li>
+            <li>Removing liquidity (token side)</li>
+            <li>Treasury or rewards wallet transfers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="distribution">
+        <h3>Fee Distribution</h3>
+        <p>For every sell transaction (2% total fee):</p>
+        <ul>
+          <li>1% → Treasury wallet</li>
+          <li>1% → Rewards wallet</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Whitepaper, FAQ and Polygonscan text retained here (omitted for brevity in this example; keep from previous version) -->
+    <section id="whitepaper" class="section container">
+      <h2>One-Page Whitepaper (V1)</h2>
+      <article class="whitepaper">
+        <h3>Abstract</h3>
+        <p>Block21 (B21) is a fixed-supply, fully decentralized digital asset deployed on Polygon. Its core design philosophy is immutability first...</p>
+        <!-- keep the full whitepaper content from your previous file here -->
+      </article>
+    </section>
+
+    <section id="faq" class="section container">
+      <h2>FAQ</h2>
+      <div class="faq-grid">
+        <details><summary>Q1: Can the supply ever increase?</summary><div class="answer">No. The supply is fixed at 2,100,000 B21 forever.</div></details>
+        <details><summary>Q2: Can the 2% fee be changed later?</summary><div class="answer">No. In V1, the fee is immutable. Any future rebates must happen externally via V2 systems.</div></details>
+        <!-- add other Q&A as needed -->
+      </div>
+    </section>
+
+    <section id="polygonscan-desc" class="section container">
+      <h2>Polygonscan Verification — Description (Copy)</h2>
+      <pre id="polygonscanText" class="code block">
+Block21 (B21) is a fixed-supply ERC-20 token deployed on Polygon with immutable tokenomics and no administrative control after launch.
+
+The contract mints exactly 2,100,000 B21 (8 decimals) once during deployment. No further minting, burning, or supply modification is possible.
+
+A fixed 2% fee is applied only when B21 is sold to the official DEX liquidity pair. Wallet-to-wallet transfers, DEX buys, and liquidity operations are fee-free. The sell fee is split automatically and sent directly to predefined Treasury and Rewards wallets.
+
+The liquidity pair address is set once after deployment to resolve DEX pool creation dependency, after which ownership is permanently renounced. This prevents any future changes to fees, liquidity routing, or token behavior.
+
+The contract contains no upgrade mechanisms, no pausing logic, no blacklists, and no external calls in the fee path. After ownership renunciation, Block21 operates as a fully decentralized and immutable ERC-20 token.
+
+Any future economic logic (V2) is designed to operate externally and cannot modify this contract.
+      </pre>
+      <div class="desc-actions">
+        <button id="copyPolyscan" class="btn tiny">Copy Description</button>
+        <a class="btn ghost tiny" href="https://polygonscan.com/address/0x9e885a4b54a04c8311e8c480f89c0e92cc0a1db2" target="_blank" rel="noopener">Open Polygonscan</a>
+      </div>
+    </section>
+
+    <!-- CONTACT / FOOTER CTA -->
+    <section id="contact" class="section container contact-section">
+      <div class="contact-inner">
+        <div>
+          <h2>Get in touch</h2>
+          <p class="muted">For partnership inquiries, audits, listings, or investor questions — reach out below.</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" onsubmit="return false;">
+          <label>
+            Name
+            <input type="text" name="name" required placeholder="Your full name">
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required placeholder="you@domain.com">
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="4" placeholder="Brief message"></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="btn primary" type="submit">Send message</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="brand-mini">
+          <svg class="brand-logo" viewBox="0 0 320 120" width="36" height="36" aria-hidden="true">
+            <defs>
+              <linearGradient id="silver3" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#f3f6f8"/><stop offset="1" stop-color="#9aa4ac"/>
+              </linearGradient>
+              <linearGradient id="gold3" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0" stop-color="#f0d57a"/><stop offset="1" stop-color="#b8860b"/>
+              </linearGradient>
+            </defs>
+            <text x="4" y="80" font-family="Inter, Arial" font-weight="800" font-size="96" fill="url(#silver3)">B</text>
+            <text x="150" y="72" font-family="Inter, Arial" font-weight="700" font-size="68" fill="url(#gold3)" letter-spacing="2">21</text>
+          </svg>
+          <div class="brand-text-mini">
+            <strong>Block21</strong><small>B21</small>
+          </div>
+        </div>
+        <div class="copyright">© 2025 Block Twenty One (B21)</div>
+      </div>
+
+      <div class="footer-right">
+        <nav class="footer-nav">
+          <a href="#about">About</a>
+          <a href="#token-identity">Token</a>
+          <a href="#tokenomics">Tokenomics</a>
+          <a href="#whitepaper">Whitepaper</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="socials">
+          <a class="social" href="https://twitter.com/your_twitter" target="_blank" aria-label="Twitter" rel="noopener">...</a>
+          <a class="social" href="https://facebook.com/your_facebook" target="_blank" aria-label="Facebook" rel="noopener">...</a>
+          <a class="social" href="https://t.me/your_telegram" target="_blank" aria-label="Telegram" rel="noopener">...</a>
+          <a class="social" href="https://github.com/your_github" target="_blank" aria-label="GitHub" rel="noopener">...</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

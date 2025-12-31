@@ -1,0 +1,12 @@
+{
+  "name": "b21-airdrop-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.0.0",
+    "ethers": "^5.7.2"
+  }
+}
